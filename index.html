@@ -1,0 +1,83 @@
+<!doctype html><html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday, My Special Person</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<canvas id="rain"></canvas><div id="stars"></div>
+<div id="intro" class="intro"><div class="intro-card"><div class="gift-box">🎁</div><p class="small">A little surprise for you</p><h1>Happy Birthday</h1><p class="muted">There is something specially prepared for you.
+</p><div class="intro-count">
+    <span>COUNTDOWN TO YOUR SPECIAL DAY</span>
+    <strong id="introCountdown">00 : 00 : 00 : 00</strong>
+</div>
+<button class="btn primary" id="start">Open Gift ✨</button></div></div>
+<header class="nav hidden" id="nav"><button class="pill" id="lang">EN</button><div class="nav-title">♡ For You</div><div class="nav-right"><button class="circle" id="music">▶</button><button class="circle" id="settings">⚙</button></div></header>
+<main class="hidden" id="main">
+<section class="hero"><div class="glow"></div><div class="photo-frame"><img id="heroImg" src="assets/profile.jpeg" alt="Foto spesial"></div><p class="small" id="eyebrow">Today is your day.</p><h2 id="title"></h2><p class="subtitle" id="subtitle">May all good things come your way.</p>
+<div class="actions"><button class="btn primary" id="openLetter">Open Letter 💌</button><button class="btn ghost" id="makeWish">Make a Wish ✨</button></div>
+<div class="count"><span id="countLabel">Leading up to a special moment </span><strong id="countdown">00 : 00 : 00 : 00</strong></div><div class="scroll">scroll ↓</div></section>
+<section class="memory"><div class="section-tag">A LITTLE MESSAGE</div><h3>For someone who <span>special</span></h3><p>Thank you for being here and adding color to this story. May you find even more reasons to smile in this new year of your life.</p>
+<div class="memory-grid">
+  <div class="memory-card">
+    <img src="assets/happy.jpeg" alt="Be Happy">
+    <h4>Be Happy</h4>
+    <p>May there always be a reason to smile and enjoy every moment of your life.</p>
+  </div>
+
+  <div class="memory-card">
+    <img src="assets/loved.jpeg" alt="Be Loved">
+    <h4>Be Loved</h4>
+    <p>May you always be surrounded by people who sincerely love and appreciate you.</p>
+  </div>
+
+  <div class="memory-card">
+    <img src="assets/you.jpeg" alt="Be You">
+    <h4>Be You</h4>
+    <p>Stay true to yourself, because you have something that makes you special.</p>
+  </div>
+</div>
+<section class="letter-area" id="letterArea"><div class="book" id="book"><div class="book-front"><div class="book-heart">♡</div><p class="small">A LETTER FOR YOU</p><h3>For You</h3><p>Tap the button below to open the letter.</p><button class="btn primary" id="read">Open Letter</button></div>
+<article class="book-inside"><button class="close" id="closeBook">×</button><p class="date">09 Oktober 2026</p><h3>Happy Birthday, Elenn.</h3><p>Hai Elenn,</p><p>Happy birthday. May this day mark the beginning of many wonderful things coming your way.</p><p>May whatever you are striving for be made easier, may your path always be accompanied by good people, and may you always have a reason to smile, even when the days aren't always easy.</p><p>Thank you for being someone special in this story.</p><p class="sign">With love,<br><b>Silver Arrows F1 Fans</b> ♡</p></article></div><button class="btn ghost" id="heartBtn">Send a Heart ♥</button></section>
+<section class="final"><div class="cake">🎂</div><h3>Make a wish.</h3><p>Close your eyes. Make a wish. Hopefully it will come true.</p><button class="btn primary" id="wishBtn">✨ Make a Wish</button></section>
+
+<section class="event-section" id="event">
+  <div class="event-heading">
+    <p class="small">EVENT INFORMATION</p>
+    <h3>See you here.</h3>
+  </div>
+
+  <div class="event-layout">
+    <div class="event-card venue-card">
+      <img src="assets/food.jpg" alt="Tempat acara">
+      <div class="venue-content">
+        <h4>Event Venue</h4>
+        <p>At the place I chose to celebrate this special day.</p>
+        <div class="venue-address">⌖ JM48+P7 Sei Agul, Kota Medan, Sumatera Utara</div>
+      </div>
+    </div>
+
+    <div class="event-details">
+      <div class="event-info">
+        <div class="info-icon">▣</div> 
+        <div><span>Date</span><b>Sunday, 11 Oct 2026</b></div>
+      </div>
+      <div class="event-info">
+        <div class="info-icon">◷</div>
+        <div><span>Time</span><b>7:00 PM</b></div>
+      </div>
+      <div class="event-info">
+        <div class="info-icon">♔</div>
+        <div><span>Dress Code</span><b>Casual with a Mercedes or Ferrari Touch</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<aside class="settings" id="panel"><div class="panel-head"><h3>⚙️ Pengaturan</h3><button id="closeSettings">×</button></div>
+<label>Nama / teks utama<input id="titleInput" value="SELAMAT|ULANG|TAHUN|KAMU"></label><label>Subtitle<input id="subtitleInput" value="Semoga semua hal baik datang kepadamu."></label><label>Teks Rain Effect<input id="rainInput" value="LOVE"></label>
+<div class="two"><label>Warna 1<input type="color" id="color1" value="#ff77b7"></label><label>Warna 2<input type="color" id="color2" value="#8f75ff"></label></div>
+<label>Countdown<input type="datetime-local" id="target"></label><label>Foto<input type="file" id="photo" accept="image/*"></label><label>Musik<input type="file" id="musicFile" accept="audio/*"></label>
+<label class="switch"><span>Efek hati</span><input type="checkbox" id="heartToggle" checked></label><label class="switch"><span>Rain effect</span><input type="checkbox" id="rainToggle" checked></label>
+<button class="btn primary full" id="apply">🎉 Terapkan</button><button class="btn ghost full" id="reset">Reset</button><p class="tip">Foto dan musik dari komputer kamu hanya dipakai di browser ini.</p></aside>
+<div class="toast" id="toast"></div><audio id="audio" loop src="assets/birthday.mp3.mp3"></audio><script src="script.js"></script></body></html>
